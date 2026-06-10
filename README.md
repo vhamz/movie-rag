@@ -12,7 +12,7 @@ CMU Movie Summary Corpus (http://www.cs.cmu.edu/~ark/personas/) — открыт
 
 ## Запуск
 
-Нужен только uv (https://docs.astral.sh/uv/).
+чтоб запустить нужен uv (https://docs.astral.sh/uv/).
 
 ```bash
 uv sync
