@@ -2,15 +2,15 @@
 
 ## Источник
 
-CMU Movie Summary Corpus — http://www.cs.cmu.edu/~ark/personas/
+CMU Movie Summary Corpus http://www.cs.cmu.edu/~ark/personas/
 
 Открытый корпус от Carnegie Mellon: краткие сюжеты фильмов, собранные из Википедии
 (дамп ноября 2012), плюс метаданные фильмов из Freebase.
 
 Из архива MovieSummaries.tar.gz используются два файла:
 
-- `plot_summaries.txt` — 42306 сюжетов, формат: wikipedia_movie_id \t plot
-- `movie.metadata.tsv` — метаданные, отсюда берем название фильма по id
+- `plot_summaries.txt`  - 42306 сюжетов, формат: wikipedia_movie_id \t plot
+- `movie.metadata.tsv` - метаданные, отсюда берем название фильма по id
 
 ## Что индексируется
 
@@ -22,10 +22,5 @@ CMU Movie Summary Corpus — http://www.cs.cmu.edu/~ark/personas/
 4. берет случайные 1500 штук (seed=42, чтобы выборка воспроизводилась)
 5. пишет data/raw/datasets.json: {"datasets": [{"id", "name", "text"}, ...]}
 
-Дальше стандартный pipeline: ingest -> chunking (по абзацам, max 800 символов,
-overlap 200) -> TF-IDF индекс. Из 1500 сюжетов получается ~4-5 тысяч чанков.
-
-## Лицензия
-
-Корпус распространяется свободно для исследовательских целей
-(тексты сюжетов — из Википедии, CC BY-SA).
+Дальше стандартный pipeline: ingest - chunking (по абзацам, max 800 символов,
+overlap 200) -> TF-IDF индекс. Из 1500 сюжетов получается около 4-5 тысяч чанков.
