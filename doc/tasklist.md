@@ -100,11 +100,3 @@ uv run streamlit run app/main.py
 ```bash
 uv run pytest tests/ -v
 ```
-
-## Критерии завершения MVP
-
-- индекс собирается одной командой
-- streamlit показывает фрагменты с doc_id и score
-- negative-вопрос дает отказ
-- тесты зеленые
-- README хватает для запуска с нуля
