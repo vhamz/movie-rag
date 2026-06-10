@@ -1,8 +1,7 @@
 # Movie RAG
 
-Учебный RAG по сюжетам фильмов: TF-IDF retrieval + demo-ответ с источниками + Streamlit.
-Задаешь вопрос по сюжету — получаешь подходящие фрагменты с doc_id и score.
-Если в базе ничего нет — отказ без выдумок.
+RAG по сюжетам фильмов: TF-IDF retrieval + demo-ответ с источниками + Streamlit.
+Вопрос по сюжету — в ответ подходящие фрагменты с doc_id и score.
 
 ## Данные
 
@@ -37,13 +36,13 @@ uv run python scripts/check_generator.py
 
 ## Demo-вопросы
 
-Корпус англоязычный, вопросы лучше задавать на английском.
+Корпус на англ, вопросы лучше задавать на английском.
 
 1. `Tony Stark new element arc reactor` -> Iron Man 2 (score 0.524)
 2. `vampire attacks in a town during polar night` -> 30 Days of Night: Dark Days (score 0.292)
 3. `bank robbery heist goes wrong` -> Thunderbolt and Lightfoot (score 0.275), Kaante (score 0.244)
 
-Negative-вопрос: `как испечь шарлотку с яблоками` -> все score 0.000, система отвечает
+Negative-вопрос: `как испечь с яблоками` -> все score 0.000, система отвечает
 "В базе нет информации по этому вопросу" и не выдумывает ответ.
 
 Лог проверки:
@@ -67,5 +66,3 @@ doc/        планирование: идея, vision, conventions, tasklist, w
 tests/      chunking + retrieval/generator
 data/       raw / processed / index (в git не коммитится, собирается скриптами)
 ```
-
-Документы планирования: [doc/](doc/). Улучшения: [IMPROVEMENTS.md](IMPROVEMENTS.md).
