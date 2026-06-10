@@ -1,0 +1,22 @@
+[project]
+name = "movie-rag"
+version = "0.1.0"
+description = "Учебный RAG по сюжетам фильмов: TF-IDF + demo-ответ с источниками"
+requires-python = ">=3.11"
+dependencies = [
+    "scikit-learn>=1.4",
+    "scipy>=1.12",
+    "streamlit>=1.30",
+]
+
+[dependency-groups]
+dev = [
+    "pytest>=8.0",
+]
+
+[tool.uv]
+package = false
+
+[tool.pytest.ini_options]
+pythonpath = ["."]
+testpaths = ["tests"]
