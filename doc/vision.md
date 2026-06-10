@@ -28,14 +28,6 @@
 - generator собирает ответ только из чанков со score >= 0.05,
   если таких нет — фиксированный отказ
 
-## Что НЕ используем в MVP
-
-- внешние LLM / API — ответ собирается из найденных фрагментов
-- векторные базы (Chroma, FAISS) — индекс лежит в файлах
-- embeddings и sentence-transformers — только TF-IDF
-- hybrid search, reranking
-- docker, CI
-
 ## Как запускать
 
 ```bash
